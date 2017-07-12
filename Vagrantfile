@@ -46,6 +46,10 @@ Vagrant.configure("2") do |config|
     apt-get update
     apt-get install -y nodejs npm git mongodb-org
     ln -s /usr/bin/nodejs /usr/bin/node # fix node name
+    # git config
+    git config --global user.email "bprecyclebin@gmail.com"
+    git config --global user.name "bernardpaulus"
+    git config --global push.default simple
     service mongod start
     npm install -g bower
     npm install -g grunt-cli
